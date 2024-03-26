@@ -6,6 +6,7 @@ import Login from "./pages/login";
 import Signup from "./pages/signup";
 import Home from "./pages/home";
 import { useAuthContext } from './context/AuthContext';
+import { BackgroundBeams } from './components/ui/background-beams';
 
 function App() {
 
@@ -28,10 +29,11 @@ function App() {
 
   return (
     <>
-      <div className='p-4 h-screen flex items-center justify-center'>
+      <div className='p-4 h-screen flex items-center justify-center relative z-10'>
         <Toaster position='top-center' />
         <RouterProvider router={router} />
       </div>
+      <BackgroundBeams />
     </>
   );
 }
